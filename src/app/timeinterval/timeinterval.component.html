@@ -1,0 +1,109 @@
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <br>
+    <div class="row">
+        <div class="col-md-7 mx-auto">
+            <form class="row g-3">
+                <p class="display-6 text-center">Add Time Intervals Here!</p>
+                <div class="col-md-6">
+                    <label class="form-label">Days Of The Week</label>
+                    <select class="form-select">
+                      <option selected>Choose...</option>
+                      <option>Mon/Wed/Fri</option>
+                      <option>Tue/Thur</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Time</label>
+                    <select class="form-select">
+                      <option selected>Choose...</option>
+                      <option value="07:00 - 09:00">07:00 - 09:00</option>
+                      <option value="09:00 - 11:00">09:00 - 11:00</option>
+                      <option value="11:00 - 01:00">11:00 - 01:00</option>
+                      <option value="02:00 - 04:00">02:00 - 04:00</option>
+                      <option value="04:00 - 06:00">04:00 - 06:00</option>
+                    </select>
+                  </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-outline-primary">Add Room</button>
+                </div>
+              </form>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-success table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Days Of The Week</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mon/Wed/Fri</td>
+                        <td>07:00 - 09:00</td>
+                        <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button> &nbsp; <button class="btn btn-danger">Delete</button> </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Tue/Thur</td>
+                        <td>11:00 - 01:00</td>
+                        <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button> &nbsp; <button class="btn btn-danger">Delete</button> </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Time Interval Info</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Days Of The Week</label>
+                            <select class="form-select">
+                              <option selected>Choose...</option>
+                              <option>Mon/Wed/Fri</option>
+                              <option>Tue/Thur</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Time</label>
+                            <select class="form-select">
+                              <option selected>Choose...</option>
+                              <option value="07:00 - 09:00">07:00 - 09:00</option>
+                              <option value="09:00 - 11:00">09:00 - 11:00</option>
+                              <option value="11:00 - 01:00">11:00 - 01:00</option>
+                              <option value="02:00 - 04:00">02:00 - 04:00</option>
+                              <option value="04:00 - 06:00">04:00 - 06:00</option>
+                            </select>
+                          </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>

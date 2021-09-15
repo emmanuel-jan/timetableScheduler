@@ -1,0 +1,153 @@
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <br>
+    <div class="row">
+        <div class="col-md-7 mx-auto">
+            <form class="row g-3">
+                <p class="display-6 text-center">Add Courses here!</p>
+                <div class="col-md-6">
+                    <label class="form-label">Course Name</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Course Code</label>
+                    <input type="text" class="form-control" id="inputZip">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Semester Offered</label>
+                    <select class="form-select">
+                      <option selected>Choose...</option>
+                      <option>Semester I</option>
+                      <option>Semester II</option>
+                      <option>Semester III</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Year Offered</label>
+                    <select class="form-select">
+                      <option selected>Choose...</option>
+                      <option>1st Year</option>
+                      <option>2nd Year</option>
+                      <option>3rd Year</option>
+                      <option>4th Year</option>
+                    </select>
+                  </div>
+                <div class="col-md-6">
+                  <label class="form-label">Instructor Nmae</label>
+                  <input type="text" class="form-control" id="inputEmail4">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Department</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-outline-primary">Add Course</button>
+                </div>
+              </form>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-success table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Course Code</th>
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Semester</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Instructor Name</th>
+                        <th scope="col">Dept Name</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>CCS 306</td>
+                        <td>Software Engineering</td>
+                        <td>Semester II</td>
+                        <td>3rd Year</td>
+                        <td>Dr Calvins</td>
+                        <td>Computer Science</td>
+                        <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button> &nbsp; <button class="btn btn-danger">Delete</button> </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>CCS 306</td>
+                        <td>Software Engineering</td>
+                        <td>Semester II</td>
+                        <td>3rd Year</td>
+                        <td>Dr Calvins</td>
+                        <td>Computer Science</td>
+                        <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button> &nbsp; <button class="btn btn-danger">Delete</button> </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Course</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Course Name</label>
+                            <input type="text" value="Software Engineering" class="form-control">
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label">Course Code</label>
+                            <input type="text" value="CCS 306" class="form-control" id="inputZip">
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label">Semester Offered</label>
+                            <select class="form-select">
+                              <option>Choose...</option>
+                              <option>Semester I</option>
+                              <option value="Semester II" selected>Semester II</option>
+                              <option>Semester III</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label">Year Offered</label>
+                            <select class="form-select">
+                              <option>Choose...</option>
+                              <option>1st Year</option>
+                              <option>2nd Year</option>
+                              <option selected>3rd Year</option>
+                              <option>4th Year</option>
+                            </select>
+                          </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Instructor Nmae</label>
+                          <input type="text" class="form-control" value="Dr Calvins">
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Department</label>
+                          <input type="text" class="form-control" value="Computer Science">
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
