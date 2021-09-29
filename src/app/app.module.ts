@@ -9,6 +9,7 @@ import { DashcontentComponent } from './dashcontent/dashcontent.component';
 import { CoursesComponent } from './courses/courses.component';
 import { RoomsComponent } from './rooms/rooms.component';
 import { TimeintervalComponent } from './timeinterval/timeinterval.component';
+import { TimetableComponent } from './timetable/timetable.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TimeintervalComponent } from './timeinterval/timeinterval.component';
     DashcontentComponent,
     CoursesComponent,
     RoomsComponent,
-    TimeintervalComponent
+    TimeintervalComponent,
+    TimetableComponent
   ],
   imports: [
     BrowserModule,
