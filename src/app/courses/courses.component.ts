@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { COURSESINTERFACE } from '../mock-courses';
 
 @Component({
   selector: 'app-courses',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursesComponent implements OnInit {
 
+  courses = COURSESINTERFACE;
+  // newCourse = COURSESINTERFACE;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addCourse(newCourse: any){
+    if(newCourse){
+      this.courses.push(newCourse);
+    }
   }
 
 }
