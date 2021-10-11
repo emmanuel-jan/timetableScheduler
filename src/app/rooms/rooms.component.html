@@ -2,22 +2,22 @@
     <br>
     <div class="row">
         <div class="col-md-7 mx-auto">
-            <form class="row g-3">
+            <form class="row g-3" #newRooms = "ngForm">
                 <p class="display-6 text-center">Add Rooms Here!</p>
                 <div class="col-md-6">
                     <label class="form-label">Room Name</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" id="roomName" name="roomName" [(ngModel)] = "newRooms.roomName">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Room Capacity</label>
-                    <input type="text" class="form-control">
+                    <input type="number" class="form-control" id="roomCapacity" name="roomCapacity" [(ngModel)] = "newRooms.roomCapacity">
                 </div>
                 <div class="col-md-12">
                   <label class="form-label">Department</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" id="deptName" name="deptName" [(ngModel)] = "newRooms.deptName">
                 </div>
                 <div class="col-12">
-                  <button type="submit" class="btn btn-outline-primary">Add Room</button>
+                  <button type="submit" class="btn btn-outline-primary" (click) = "addRoom(newRooms.value)">Add Room</button>
                 </div>
               </form>
         </div>
@@ -39,18 +39,11 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>35</td>
-                        <td>TB-1</td>
-                        <td>Computer Science</td>
-                        <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button> &nbsp; <button class="btn btn-danger">Delete</button> </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>100</td>
-                        <td>TB-2</td>
-                        <td>Computer Science</td>
+                      <tr *ngFor = "let room of rooms">
+                        <th scope="row">{{room.id}}</th>
+                        <td>{{room.roomCapacity}}</td>
+                        <td>{{room.roomName}}</td>
+                        <td>{{room.deptName}}</td>
                         <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button> &nbsp; <button class="btn btn-danger">Delete</button> </td>
                       </tr>
                     </tbody>
