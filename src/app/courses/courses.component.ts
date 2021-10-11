@@ -9,7 +9,7 @@ import { COURSESINTERFACE } from '../mock-courses';
 export class CoursesComponent implements OnInit {
 
   courses = COURSESINTERFACE;
-  // newCourse = COURSESINTERFACE;
+  newCourse = [];
 
   constructor() { }
 
