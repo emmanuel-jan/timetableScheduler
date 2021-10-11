@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ROOMSINTERFACE } from '../mock-rooms';
 
 @Component({
   selector: 'app-rooms',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomsComponent implements OnInit {
 
+  rooms = ROOMSINTERFACE;
+  newRooms = []
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addRoom(newRooms:any){
+    if(newRooms){
+      this.rooms.push(newRooms);
+    }
   }
 
 }
