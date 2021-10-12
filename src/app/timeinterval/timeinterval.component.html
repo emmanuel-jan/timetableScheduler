@@ -2,11 +2,11 @@
     <br>
     <div class="row">
         <div class="col-md-7 mx-auto">
-            <form class="row g-3">
+            <form class="row g-3" #newTimeInterval = "ngForm">
                 <p class="display-6 text-center">Add Time Intervals Here!</p>
                 <div class="col-md-6">
                     <label class="form-label">Days Of The Week</label>
-                    <select class="form-select">
+                    <select class="form-select" name="day" id="day" [(ngModel)] = "newTimeInterval.day">
                       <option selected>Choose...</option>
                       <option>Mon/Wed/Fri</option>
                       <option>Tue/Thur</option>
@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Time</label>
-                    <select class="form-select">
+                    <select class="form-select" name="time" id="time" [(ngModel)] = "newTimeInterval.time">
                       <option selected>Choose...</option>
                       <option value="07:00 - 09:00">07:00 - 09:00</option>
                       <option value="09:00 - 11:00">09:00 - 11:00</option>
@@ -24,7 +24,7 @@
                     </select>
                   </div>
                 <div class="col-12">
-                  <button type="submit" class="btn btn-outline-primary">Add Room</button>
+                  <button type="submit" class="btn btn-outline-primary" (click) = "addTime(newTimeInterval.value)">Add Room</button>
                 </div>
               </form>
         </div>
@@ -45,16 +45,10 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mon/Wed/Fri</td>
-                        <td>07:00 - 09:00</td>
-                        <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button> &nbsp; <button class="btn btn-danger">Delete</button> </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Tue/Thur</td>
-                        <td>11:00 - 01:00</td>
+                      <tr *ngFor = "let times of timeInterval">
+                        <th scope="row">{{times.id}}</th>
+                        <td>{{times.day}}</td>
+                        <td>{{times.time}}</td>
                         <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button> &nbsp; <button class="btn btn-danger">Delete</button> </td>
                       </tr>
                     </tbody>
