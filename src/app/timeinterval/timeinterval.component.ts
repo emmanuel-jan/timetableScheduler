@@ -9,16 +9,16 @@ import { TimeInterval } from '../timeInterface';
 export class TimeintervalComponent implements OnInit {
 
   timeInterval:TimeInterval[] = [];
-  newTimeInterval = [];
+  // newTimeInterval = [];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  addTime(newTimeInterval:any){
-    if(newTimeInterval){
-      this.timeInterval.push(newTimeInterval);
+  addTime(timeInterval:any){
+    if(timeInterval){
+      this.timeInterval.push(timeInterval);
     }
   }
 
